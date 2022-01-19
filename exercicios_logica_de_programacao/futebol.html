@@ -1,0 +1,17 @@
+<meta charset = "UTF-8">
+<script>
+	function pulaLinha() {
+		document.write("<br><br>");
+	}
+	
+	function mostra(calculo) {
+		document.write(calculo);
+		pulaLinha();
+	}
+	
+	var vitorias = Number(prompt("Entre com o número de vitórias: "));
+	var empates = parseInt(prompt("Entre com o número de empates: "));
+	var pontos = (vitorias * 3) + empates
+	
+	mostra("Os pontos do seu time correspondem a " + pontos + ".");
+</script>
