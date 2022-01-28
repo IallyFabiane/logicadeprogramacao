@@ -1,0 +1,27 @@
+<canvas width="600" height="400"></canvas>  
+<script>
+let tela = document.querySelector('canvas');
+let pincel = tela.getContext('2d');
+pincel.fillStyle = 'lightgray';
+pincel.fillRect(0, 0, 600, 400);
+
+function desenhaCirculo(x, y, raio, cor) {
+    pincel.fillStyle = cor;
+    pincel.beginPath();
+    pincel.arc(x, y, raio, 0, 2*3.14);
+    pincel.fill();
+}
+function desenhaFlor(x, y) {
+    desenhaCirculo(x, y, 10, "red");
+    desenhaCirculo(x-20, y, 10, "blue");
+    desenhaCirculo(x, y-20, 10, "yellow");
+    desenhaCirculo(x+20, y, 10, "orange");
+    desenhaCirculo(x, y+20, 10, "black");
+}
+
+for (let posicaoY = 50; posicaoY <= 370; posicaoY += 60) {                 //move-se verticalmente
+    for (let x = 60; x < 570; x += 60) {                                                    //encarrega-se de desenhar as flores horizontalmente
+        desenhaFlor(x, posicaoY);
+    }
+}
+</script>

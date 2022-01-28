@@ -1,0 +1,32 @@
+<meta charset = "UTF-8">
+<script>
+function calculaProximaIdade(idade) {
+    idade += 1;
+    document.write(idade);
+    document.write("<br>");
+}
+
+function calculaProximasIdades(idades) {
+    for (let i = 0; i < idades.length; i += 1) {
+        idades[i] += 1;
+    }
+    document.write(idades);
+    document.write("<br>");
+}
+
+function calculaIdadesDaqui5Anos(idades) {
+     for (let i = 0; i < idades.length; i += 1) {
+        idades[i] += 4;
+    }
+    document.write(idades);
+    document.write("<br>");
+}
+
+const idadeStefany = 21;
+calculaProximaIdade(idadeStefany);
+
+var idadesAmigos = [idadeStefany, 20, 23, 18, 7];
+calculaProximasIdades(idadesAmigos);
+
+calculaIdadesDaqui5Anos(idadesAmigos);
+</script>
