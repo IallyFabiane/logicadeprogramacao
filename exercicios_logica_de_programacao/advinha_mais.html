@@ -14,7 +14,7 @@
 		while (numero <= quantidade) {
 			var numeroAleatorio = sorteia();
 			
-			if (numeroAleatorio !== 0) {
+			if (numeroAleatorio !== 0) { //EVITAR QUE O ARRAY RECEBA NUMERO ALEATÓRIO = 0;
 				var achou = false;
 				
 				for (var posicao = 0; posicao < segredos.length; posicao++) {  //EVITAR REPETIÇÃO DOS NÚMEROS DENTRO DO ARRAY
